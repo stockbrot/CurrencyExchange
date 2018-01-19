@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Wooooooorld!</title>
+  <script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" type="text/css" "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" "https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" />
+</head>
+
+<body>
+  <div id="body" class="container">
+    <div class="row">
+      <div class="column">
+        <h1>
+        <img src="http://www.emoji.co.uk/files/google-emojis/animals-nature-android/7510-full-moon-with-face.png" alt="" height="50px">
+        "TRX to the Moon"
+        <img src="https://cdn.worldvectorlogo.com/logos/tron.svg" alt="" height="50px">
+      </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <input type="text" v-model="wantedEur">
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Use this Div's instead of my pre container, thats hacky :P -->
+      <div :class="{ column: true, badge: true, highest: (data.TRX == highest) }" v-for="data in allData">
+        {{ data.TRX }} <br> {{ data.ALG }}
+      </div>
+    </div>
+
+    <pre>
+
+      Sry das ich die arbeit schon abgenommen habe :-<
+      Es sieht jedoch alles noch recht scheiße aus,
+      das könntest du ändern :P
+      Ok, danke
+
+      Vllt hast du noch andere sinnvolle Ideen ;)
+
+      {{ $data }}
+    </pre>
+  </div>
+  </div>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    require('./exchange.js')
+  </script>
+</body>
+
+</html>
